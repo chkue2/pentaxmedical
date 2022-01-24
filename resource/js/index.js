@@ -1,3 +1,5 @@
+let swiper5 = null;
+
 $(document).ready(function(){
   const swiper1 = new Swiper('.section__01 .swiper__container', {
     centeredSlides: true,
@@ -43,7 +45,7 @@ $(document).ready(function(){
     slidesPerView: 'auto',
     loopedSlides: 2,  
     spaceBetween: 84,
-    autoHeight: true,
+    autoHeight: false,
     pagination: {
       el: '.swiper-pagination-04',
       clickable: true,
@@ -52,13 +54,36 @@ $(document).ready(function(){
       nextEl: '.swiper-button-next-04',
       prevEl: '.swiper-button-prev-04',
     },
+    on:{
+      activeIndexChange(e){
+        const idx = e.realIndex
+        $('.section__05 .section__header span').removeClass('active')
+        $(`#header${idx}`).addClass('active')
+      }
+    }
   });
-  const swiper5 = new Swiper('.section__09 .ver__slide', {
+  swiper5 = new Swiper('.section__09 .ver__slide', {
     slidesPerView: 'auto',
     direction: 'vertical',
     centeredSlides: true,
     loop: true,
     spaceBetween: 84,
     autoHeight: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    on:{
+      activeIndexChange(e){
+        const idx = e.realIndex
+        $('.slide__side p').removeClass('on')
+        $(`#slideSide${idx}`).addClass('on')
+      }
+    }
   });
+})
+
+$(document).on('click', '.slide__side p', function(){
+  const id = $(this).attr('id').split('slideSide')[1]
+  swiper5.slideTo(id)
 })
