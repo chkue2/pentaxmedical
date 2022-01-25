@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   background-color: #ffffff;
-  z-index: 10;
+  z-index: 100;
   border-bottom: 1px solid #000000;
 }
 .header.pc{display: block;}
@@ -38,6 +38,7 @@
   box-sizing: border-box;
   font-weight: var(--font-semibold);
   transition: all .15s ease;
+  cursor: pointer;
 }
 .header__menu a:hover{
   border-bottom: 5px solid #D9000D;
@@ -113,7 +114,7 @@
   border: none;
 }
 .section__01{
-  padding-top: 290px;
+  margin-top: 290px;
 }
 .section__01 .section__left{
   display: flex;
@@ -180,7 +181,7 @@
 .section__02{
   max-width: var(--max-width);
   margin: 0 auto;
-  padding-top: 130px;
+  margin-top: 130px;
 }
 .section__02 .content{
   font-size: 20px;
@@ -226,7 +227,7 @@
 .section__03{
   max-width: var(--max-width);
   margin: 0 auto;
-  padding-top: 130px;
+  margin-top: 130px;
 }
 .section__03 .title p{
   font-size: 86px;
@@ -521,7 +522,7 @@
 .section__05{
   max-width: var(--max-width);
   margin: 0 auto;
-  padding-top: 130px;
+  margin-top: 130px;
 }
 .section__05 .section__header span{
   font-size: 30px;
@@ -710,7 +711,7 @@
   color: #ffffff;
 }
 .section__07{
-  margin-top: 170px;
+  padding-top: 170px;
 }
 .section__07 .container{
   max-width: var(--max-width);
@@ -789,7 +790,7 @@
   margin-left: 13px;
 }
 .section__08 {
-  margin-top: 170px;
+  padding-top: 170px;
 }
 .section__08 .container{
   max-width: var(--max-width);

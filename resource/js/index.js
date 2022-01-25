@@ -70,7 +70,7 @@ $(document).ready(function(){
     spaceBetween: 84,
     autoHeight: true,
     autoplay: {
-      delay: 3000,
+      delay: 6000,
       disableOnInteraction: false
     },
     on:{
@@ -86,4 +86,14 @@ $(document).ready(function(){
 $(document).on('click', '.slide__side p', function(){
   const id = $(this).attr('id').split('slideSide')[1]
   swiper5.slideTo(id)
+})
+
+$(document).on('click', '.header__menu--click', function(){
+  const pos = $(this).attr('id')
+  
+  const y = document.querySelector(`.${pos}`).offsetTop
+
+  $('html, body').stop().animate({
+    scrollTop: y - 170
+  })
 })
