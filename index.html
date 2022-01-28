@@ -15,9 +15,12 @@
     <link rel="stylesheet" href="resource/css/index.css" />
     <link rel="stylesheet" href="resource/css/aos.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+
   
     <script src="resource/lib/jquery-3.5.1-slim.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="resource/js/index.js"></script>
   </head>
   <body>
@@ -26,10 +29,10 @@
         <a href="/"><img class="header__logo" src="resource/img/logo.png" alt="logo"></a>
         <div class="header__menu">
           <a class="header__menu--click" id="section__01">IMAGINA</a>
-          <a class="header__menu--click" id="section__09">BENEFIT</a>
+          <a class="header__menu--click" id="section__09pc">BENEFIT</a>
           <a class="header__menu--click" id="section__03">CLINICAL STUDIES</a>
-          <a class="header__menu--click" id="section__05">PENTAX</a>
-          <p class="red__button">DEMO REQUEST</p>
+          <a class="header__menu--click" id="section__05pc">PENTAX</a>
+          <p class="red__button header__menu--click" id="section__06">DEMO REQUEST</p>
           <div class="lang__menu">
             <img src="resource/img/global-line.png" alt="lang">
             <div class="menu__box">
@@ -44,7 +47,7 @@
       <div class="common__container">
         <a href="/"><img class="header__logo" src="resource/img/logo.png" alt="logo"></a>
         <div class="header__menu">
-          <p class="red__button">DEMO REQUEST</p>
+          <p class="red__button header__menu--click" id="section__06">DEMO REQUEST</p>
           <div class="lang__menu">
             <img src="resource/img/global-line.png" alt="lang">
             <div class="menu__box">
@@ -59,14 +62,14 @@
       </div>
       <div class="header__nav">
         <a class="header__menu--click" id="section__01">IMAGINA</a>
-        <a class="header__menu--click" id="section__09">BENEFIT</a>
+        <a class="header__menu--click" id="section__09mo">BENEFIT</a>
         <a class="header__menu--click" id="section__03">CLINICAL STUDIES</a>
-        <a class="header__menu--click" id="section__05">PENTAX</a>
-        <p>DEMO REQUEST</p>
+        <a class="header__menu--click" id="section__05mo">PENTAX</a>
+        <p class="header__menu--click" id="section__06">DEMO REQUEST</p>
       </div>
     </section>
     <section class="section__01">
-      <div class="common__container section__container">
+      <div class="common__container section__container" data-aos="fade-up" data-aos-duration="800">
         <div class="section__left">
           <p class="left__top">IMAGINA</p>
           <p class="left__bottom">Imagine you have the perfect solution for your daily practices</p>
@@ -75,7 +78,7 @@
           <img src="resource/img/imagina.png" alt="#">
         </div>
       </div>
-      <div class="swiper__container">
+      <div class="swiper__container" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
         <div class="swiper-wrapper">
           <div class="swiper-slide slide1">
             Cost efficient, <br>reliable and safe
@@ -93,7 +96,7 @@
       </div>
     </section>
     <section class="section__02">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-duration="800">
         <p class="content">Developed by directly integrating feedback from physicians worldwide,</p>
         <p class="title">The IMAGINA video processor was made for your daily diagnostic and therapeutic needs.</p>
         <p class="content">The platform is completed by three new endsocopes – one video gastroscope and two video colonoscopes.</p>
@@ -106,18 +109,18 @@
     <section class="section__08">
       <div class="container">
         <div class="image__box">
-          <div class="image__left">
+          <div class="image__left" data-aos="fade-up" data-aos-duration="800">
             <img src="resource/img/ban_02.jpg" alt="#">
             <p>Cost efficient,<br>reliable and safe</p>
           </div>
-          <div class="image__right">
+          <div class="image__right" data-aos="fade-up" data-aos-duration="800">
             <img src="resource/img/ban_03.jpg" alt="#">
             <p>Improved workflow<br>efficiency</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="section__09">
+    <section class="section__09 section__09pc" data-aos="fade-up" data-aos-duration="800">
       <div class="container">
         <p class="title">Feature & Benefit</p>
         <div class="ver__slide">
@@ -204,13 +207,97 @@
         </div>
       </div>
     </section>
+    <section class="section__09 section__09mo" data-aos="fade-up" data-aos-duration="800">
+      <div class="container">
+        <p class="title">Feature <br>& Benefit</p>
+        <div class="top__slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="resource/img/img39-1.png" alt="#">
+            </div>
+            <div class="swiper-slide">
+              <img src="resource/img/img41-1.png" alt="#">
+            </div>
+            <div class="swiper-slide">
+              <img src="resource/img/img44.png" alt="#">
+            </div>
+            <div class="swiper-slide">
+              <img src="resource/img/img45.png" alt="#">
+            </div>
+            <div class="swiper-slide">
+              <img src="resource/img/2.png" alt="#">
+            </div>
+          </div>
+        </div>
+        <div class="bottom__slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide__left">
+                <p class="slide__title">Collect and share with the unique integrated</p>
+                <p class="slide__content">The video recording function enables capture of HD+ video files through a USB storage device, for fast and easy sharing of findings with peers. Contributes to cost savings in the endoscopy room by avoiding unnecessary external HD recording devices. For capturing and recording the sharpest image, the IMAGINA also incorporates freeze scan technology which automatically selects the sharpest picture.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide__left">
+                <p class="slide__title">Full HD image sensor</p>
+                <p class="slide__content">LED illumination delivers light without loss from lamp to distal tip that reduces image noises. The New generation HD image sensor delivers state of the art image quality for greater visualization.</p>
+                <div class="image__bottom">
+                  <img src="resource/img/img39.png" alt="#">
+                  <img src="resource/img/img40.png" alt="#">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide__left">
+                <p class="slide__title">Improved diagnostic outcomes</p>
+                <p class="slide__content">IMAGINA supports each step of the clinical pathway, from screening to diagnosis towards day-to-day therapy, with state of the art HD image quality powered by i-scan.</p>
+                <div class="image__top">
+                  <img src="resource/img/img41.png" alt="#">
+                </div>
+                <div class="image__bottom">
+                  <img src="resource/img/img42.png" alt="#">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide__left">
+                <p class="slide__title">Enhanced Therapeutic Capabilities</p>
+                <p class="slide__bold">Larger Instrument Channels</p>
+                <p class="slide__content">The Gastroscope (EG29-i10c) and Colonoscope (EC34-i10c, EC38-i10c) feature larger instrument channels 3.2mm and 3.8mm respectively. This results in increased suction power and the opportunity to use larger accessories.</p>
+                <p class="slide__bold">Further Angulation Range (FARTM)</p>
+                <p class="slide__content">Gastroscope orientation solution : PENTAX Medical's gastroscope can bend 33% more in the downward direction and 20% more in the outer right and left direction than other models in its class, making it easier to approach the unapproachable lesions for biopsy and treatment. In addition, the fundus area of the stomach is easy to observe.</p>
+                <table>
+                  <tr>
+                    <td colspan="2">Gastroscope(EG29-i10c) Angulation range</td>
+                  </tr>
+                  <tr class="white">
+                    <td>UP / Down</td>
+                    <td class="border">210 / 120</td>
+                  </tr>
+                  <tr>
+                    <td>Right / Left</td>
+                    <td class="border">120 / 120</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide__left">
+                <p class="slide__title">Touch Screen control</p>
+                <p class="slide__content">We need just one and two finger swipe control for setting adjustment or zoom. Make your own display, you can use Widget function to customize the menu. Thumbnail view allows you to see the diagnosis at once. You can see the captured image and movie on the front panel and monitor at the sametime.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section__03">
-      <div class="title">
+      <div class="title" data-aos="fade-up" data-aos-duration="800">
         <p>Clinical Studies</p>
         <a href="/">Learn more +</a>
       </div>
       <p class="subtitle">Endoscopic submucosal dissection for early gastric cancer with i-scan</p>
-      <div class="content pc">
+      <div class="content pc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
         <div class="content__left">
           <div class="content__block block1">
             <div class="bg"></div>
@@ -255,7 +342,7 @@
           </div>
         </div>
       </div>
-      <div class="content mo">
+      <div class="content mo" data-aos="fade-up" data-aos-duration="800">
         <div class="content__swiper mo">
           <div class="swiper-wrapper">
             <div class="swiper-slide content__block block1">
@@ -332,7 +419,7 @@
       </div>
     </div>
     </section>
-    <section class="section__07">
+    <section class="section__07" data-aos="fade-up" data-aos-duration="800">
       <div class="container">
         <div class="container__left">
           <div class="left__item">
@@ -373,8 +460,8 @@
       </div>
     </section>
     <section class="section__04">
-      <p class="title" id="section04Title">Reflux <br>Esophagitis <br>LA C</p>
-      <div class="swiper__container pc">
+      <p class="title" id="section04Title" data-aos="fade-up" data-aos-duration="800">Reflux <br>Esophagitis <br>LA C</p>
+      <div class="swiper__container pc" data-aos="fade-up" data-aos-duration="400">
         <div class="swiper-wrapper">
           <div class="swiper-slide slide__profile">
             <div class="profile__left">
@@ -596,7 +683,7 @@
         <i class="swiper-next swiper-button-next-03">></i>
         <div class="swiper-pagination-03"></div>
       </div>
-      <div class="swiper__container mo">
+      <div class="swiper__container mo" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
         <div class="swiper-wrapper">
           <div class="swiper-slide slide__profile">
             <div class="profile__left">
@@ -803,13 +890,13 @@
         <div class="swiper-pagination-03-mo"></div>
       </div>
     </section>
-    <section class="section__05">
-      <p class="section__header">
+    <section class="section__05 section__05pc">
+      <p class="section__header" data-aos="fade-up" data-aos-duration="800">
         <span class="active" id="header0">PENTAX Medical</span>
         <span id="header1">HOYA</span>
       </p>
-      <p class="title">PENTAX Medical</p>
-      <div class="swiper__container">
+      <p class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">PENTAX Medical</p>
+      <div class="swiper__container" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
         <div class="swiper-wrapper">
           <div class="swiper-slide medical01">
             <p class="swiper__title">PENTAX Medical</p>
@@ -836,15 +923,53 @@
         <div class="swiper-pagination-04"></div>
       </div>
     </section>
+    <section class="section__05 section__05mo" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+      <div class="swiper__container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide medical01">
+            <p class="swiper__title">PENTAX Medical</p>
+            <div class="swiper__box">
+              <img src="resource/img/pentax_ban-mo.png" alt="#">
+              <p class="swiper__subtitle">About PENTAX Medical</p>
+              <p class="swiper__subcontent">
+                PENTAX Medical is a division of HOYA Group.<br>
+                The company’s mission is to improve the standard of patient care and quality of healthcare delivery by providing the best endoscopic products and services with a focus on QUALITY, CLINICALLY RELEVANT INNOVATION, and SIMPLICITY.
+              </p>
+            </div>
+            <p class="swiper__content"><a>PENTAX Medical</a> strives to align with the healthcare community’s Triple Aim goals through transparent partnerships with its customers and by providing the highest quality solutions to help them reach their goals, including enabling customers to improve patient outcomes by offering evidence-based solutions across the continuum of care; ensuring value by supporting the customers to improve their efficiency and minimize their healthcare costs; and enriching patient and provider’s experience by empowering every member of the care team to achieve optimal outcomes through products, education, and support. </p>
+            <p class="swiper__content">Focused on the outcome instead of technological features, PENTAX Medical listens to the healthcare community and their patients, understands their daily obstacles and helps improve endoscopy with smart innovations. </p>
+            <p class="swiper__content">For more information. <br><a href="www.pentaxmedical.com">www.pentaxmedical.com</a></p>
+          </div>
+          <div class="swiper-slide medical02">
+            <p class="swiper__title">About HOYA</p>
+            <div class="swiper__box">
+              <img src="resource/img/hoya_ban-mo.png" alt="#">
+              <p class="swiper__subtitle">About HOYA</p>
+              <p class="swiper__subcontent">
+                Founded in 1941 in Tokyo, Japan, HOYA Corporation is a global technology and med-tech company and a leading supplier of innovative high-tech and medical products.
+              </p>
+            </div>
+            <p class="swiper__content">
+              HOYA’s divisions and business units research and develop products utilized in the healthcare and information technology fields.<br>
+              In the healthcare field, we provide medical device products such as eyeglasses, medical endoscopes, contact and intraocular lenses, orthopedic implants, surgical/therapeutic devices and medical device reprocessing and disinfection solutions.<br>
+              In the information technology field, we provide products such as optical lenses, photomasks and blanks used in the manufacturing process for semiconductor and LCD/OLED devices, text to speech, human resources and other software solutions and critical components for the mass memory and cloud storage industries.<br>
+              With over 150 offices and subsidiaries worldwide, HOYA currently employs a multinational workforce of 37,000 people.
+            </p>
+            <p class="swiper__content">For more information, <br>please visit <br><a href="http://www.hoya.com" target="blank">http://www.hoya.com</a></p>
+          </div>
+        </div>
+        <div class="swiper-pagination-04-mo"></div>
+      </div>
+    </section>
     <section class="section__06">
       <div class="container">
-        <p class="title">Demo Request</p>
+        <p class="title" data-aos="fade-up" data-aos-duration="800">Demo Request</p>
         <div class="sub__container">
-          <p class="sub__text">
+          <p class="sub__text" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
             I agree to be contacted by a PENTAX Medical representative.<br>
             * PENTAX Medical is committed to protecting and respecting your privacy as described our Privacy Policy. By clicking submit below, you consent to receive marketing materials and PENTAX Medical to store and personal infomation submitted above to provide you the content requested.
           </p>
-          <form action="#">
+          <form action="#" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
             <p class="form__title">MANDATORY FIELD</p>
             <div class="form__top">
               <div class="form__item">
@@ -868,6 +993,10 @@
                 <input type="text" name="title">
               </div>
             </div>  
+            <p class="sub__text">
+              I agree to be contacted by a PENTAX Medical representative.<br>
+              * PENTAX Medical is committed to protecting and respecting your privacy as described our Privacy Policy. By clicking submit below, you consent to receive marketing materials and PENTAX Medical to store and personal infomation submitted above to provide you the content requested.
+            </p>
             <div class="form__button">
               <input type="submit" value="SUBMIT">
             </div>
@@ -879,14 +1008,24 @@
       <div class="container">
         <div class="footer__left">
           <img src="resource/img/logo.png" alt="#">
-          <p>
+          <p class="pc">
             <span>MEDICAL KOREA</span><br>
             <span>11F, 42 Olympic-ro 35da-gil, Songpa-gu, Seoul, Korea 05510</span><br>
             <span>Tel. +82-1544-9954</span><span>Email. inquiryKorea@pentaxmedical.com</span>
+          </p>
+          <p class="mo">
+            <span>MEDICAL KOREA</span>
+            <span>11F, 42 Olympic-ro 35da-gil,</span>
+            <span>Songpa-gu, Seoul, Korea 05510</span>
+            <span>Tel. +82-1544-9954</span>
+            <span>Email. inquiryKorea@pentaxmedical.com</span>
           </p>
         </div>
         <p class="footer__right">© Copyright PENTAX Medical All Rights Reserved</p>
       </div>
     </section>
+    <script> 
+      AOS.init();
+    </script>
   </body>
 </html>
