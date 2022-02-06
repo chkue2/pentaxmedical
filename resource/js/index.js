@@ -212,3 +212,16 @@ const openVPopup = id => {
 const closeVPopup = id => {
   $(`#${id}`).hide()
 }
+
+$(document).on('click', '.section__04 .accordion__item', function(){
+  const $id = $(this).attr('id')
+  const actionable = $(`.${$id}`).attr('class').split(' ').includes('active')
+
+  if(actionable){
+    $(this).removeClass('active')
+    $(`.${$id}`).removeClass('active')
+  } else {
+    $(this).addClass('active')
+    $(`.${$id}`).addClass('active')
+  }
+})
