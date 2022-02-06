@@ -34,13 +34,13 @@ $(document).ready(function(){
     slidesPerView: 'auto',
     loop: true,
     loopedSlides: 2,  
-    autoHeight: false,
+    autoHeight: true,
     pagination: {
       el: '.swiper-pagination-02-mo',
       clickable: true,
     }
   });
-  const swiper3 = new Swiper('.section__04 .swiper__container.pc', {
+  const swiper3 = new Swiper('.section__04 .swiper__container.sectionTab01', {
     centeredSlides: true,
     slidesPerView: 'auto',
     loop: true,
@@ -48,15 +48,15 @@ $(document).ready(function(){
     spaceBetween: 84,
     autoHeight: true,
     pagination: {
-      el: '.swiper-pagination-03',
+      el: '.swiper-pagination-sectionTab01',
       clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next-03',
-      prevEl: '.swiper-button-prev-03',
+      nextEl: '.swiper-button-next-sectionTab01',
+      prevEl: '.swiper-button-prev-sectionTab01',
     }
   });
-  const swiper3_1 = new Swiper('.section__04 .swiper__container.mo', {
+  const swiper3_1 = new Swiper('.section__04 .swiper__container.sectionTab02', {
     centeredSlides: true,
     slidesPerView: 'auto',
     loop: true,
@@ -64,9 +64,29 @@ $(document).ready(function(){
     spaceBetween: 84,
     autoHeight: true,
     pagination: {
-      el: '.swiper-pagination-03-mo',
+      el: '.swiper-pagination-sectionTab02',
       clickable: true,
     },
+    navigation: {
+      nextEl: '.swiper-button-next-sectionTab02',
+      prevEl: '.swiper-button-prev-sectionTab02',
+    }
+  });
+  const swiper3_2 = new Swiper('.section__04 .swiper__container.sectionTab03', {
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop: true,
+    loopedSlides: 2,  
+    spaceBetween: 84,
+    autoHeight: true,
+    pagination: {
+      el: '.swiper-pagination-sectionTab03',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-sectionTab03',
+      prevEl: '.swiper-button-prev-sectionTab03',
+    }
   });
   const swiper4 = new Swiper('.section__05pc .swiper__container', {
     centeredSlides: true,
@@ -134,6 +154,10 @@ $(document).ready(function(){
       delay: 6000,
       disableOnInteraction: false
     },
+    navigation: {
+      nextEl: '.swiper-button-next-09',
+      prevEl: '.swiper-button-prev-09',
+    },
     on:{
       slidePrevTransitionStart(){
         swiper5_2.slidePrev()
@@ -171,3 +195,20 @@ $(document).on('click', '#headerMenu', function(){
   }
   
 })
+
+$(document).on('click', '.section__04 .section__tab .tab__item', function(){
+  const $target = $('.section__04 .section__tab .tab__item')
+  const $target2 = $('.section__04 .swiper__container')
+  const $id = $(this).attr('id')
+  $target.removeClass('active')
+  $(this).addClass('active')
+  $target2.removeClass('active')
+  $(`.${$id}`).addClass('active')
+})
+
+const openVPopup = id => {
+  $(`#${id}`).show()
+}
+const closeVPopup = id => {
+  $(`#${id}`).hide()
+}

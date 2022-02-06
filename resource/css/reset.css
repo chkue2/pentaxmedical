@@ -10,6 +10,7 @@ html{color:#333333;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
 *{
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  letter-spacing: -1.2px;
   color: #000000;
   word-break: keep-all;
   box-sizing: border-box;
@@ -45,3 +46,4 @@ i{font-style: normal;}
   --font-semibold: 600;
   --font-bold: 700;
 }
+video{max-width: 100%}
