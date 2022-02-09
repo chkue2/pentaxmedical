@@ -247,7 +247,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/blcak_ban.jpg);
+  background-image: url(../img/video.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -566,6 +566,14 @@
 .section__04 .slide__updown .updown__container + .updown__container{
   margin-top: 80px;
 }
+.section__04 .slide__updown .updown__container.video__container .updown__left{
+  width: 40%
+}
+.section__04 .slide__updown .updown__container.video__container .updown__right{
+  flex: 1;
+  display: flex;
+  margin-left: 75px;
+}
 .section__04 .slide__updown .updown__container .updown__right{
   display: flex;
   margin-left: 75px;
@@ -590,8 +598,26 @@
 .section__04 .slide__updown .updown__image img + img{
   margin-left: 49px;
 }
+.section__04 .slide__updown .video__container .updown__image img{
+  width: 33%;
+  height: auto;
+  flex: 1;
+}
+.section__04 .slide__updown .video__container .updown__image img + img{
+  margin-left: 12px;
+}
 .section__04 .slide__profile{
   display: flex;
+}
+.section__04 .image__box{
+  padding: 12px 0;
+}
+.section__04 .image__box img{
+  max-width: 400px;
+  width: 50%;
+}
+.section__04 .image__box img + img{
+  margin-left: 24px;
 }
 .section__04 .swiper__container i{
   display: block;
@@ -649,6 +675,7 @@
   letter-spacing: -1.8px;
   color: #c8c8c8;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .section__05 .section__header span.active{
   color: #D9000D;
@@ -1119,8 +1146,10 @@
 .section__09 .ver__slide .swiper-slide table tr td.border{
   border-left: 1px solid #000000;
 }
-.section__09 .ver__slide .swiper-slide video{
+.section__09 .ver__slide .swiper-slide .gif,
+.section__09 .bottom__slide .swiper-slide .gif{
   margin-top: 26px;
+  width: 100%;
 }
 .section__footer{
   min-height: 250px;
@@ -1507,7 +1536,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-image: url(../img/blcak_ban_mo.png);
+    background-image: url(../img/video.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1760,6 +1789,7 @@
   }
   .section__04 .swiper-wrapper .swiper-slide{
     width: 100%;
+    height: auto;
     min-height: 745px;
     padding: 0;
     position: relative;
@@ -2008,21 +2038,43 @@
   }
   .section__04 .section__04__mo .accordion__item.active i{background-image: url(../img/arrow-up-s-line.png);}
   .section__04 .section__04__mo .accordion__container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+  }
+  .section__04 .section__04__mo .accordion__container .bg{
     width: 100%;
-    max-height: 0px;
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
-    overflow: hidden;
-    transition: max-height 0.15s ease-out;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
   .section__04 .section__04__mo .accordion__container.active{
-    max-height: 1500px;
-    transition: max-height 0.3s ease-in;
+    display: block;
   }
-  .section__04 .section__04__mo .accordion__container.sectionAccordion01{background-color: rgba(217, 217, 217, 0.25);}
-  .section__04 .section__04__mo .accordion__container.sectionAccordion02{background-color: #eff4f4;}
-  .section__04 .section__04__mo .accordion__container.sectionAccordion03{background-color: rgba(191, 188, 213, 0.25);}
+  .section__04 .section__04__mo .accordion__container .swiper-wrapper{
+    width: calc(100% - 40px);
+    height: calc(100% - 70px);
+    padding: 16px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-sizing: border-box;
+    border-radius: 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .section__04 .section__04__mo .accordion__container.sectionAccordion01 .swiper-wrapper{background-color: rgba(217, 217, 217);}
+  .section__04 .section__04__mo .accordion__container.sectionAccordion02 .swiper-wrapper{background-color: #eff4f4;}
+  .section__04 .section__04__mo .accordion__container.sectionAccordion03 .swiper-wrapper{background-color: rgba(191, 188, 213);}
   .section__05{
     max-width: var(--max-width);
     margin: 0 auto;

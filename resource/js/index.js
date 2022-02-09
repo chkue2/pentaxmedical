@@ -1,3 +1,4 @@
+let swiper4 = null;
 let swiper5 = null;
 let swiper5_2 = null;
 
@@ -88,7 +89,7 @@ $(document).ready(function(){
       prevEl: '.swiper-button-prev-sectionTab03',
     }
   });
-  const swiper4 = new Swiper('.section__05pc .swiper__container', {
+  swiper4 = new Swiper('.section__05pc .swiper__container', {
     centeredSlides: true,
     slidesPerView: 'auto',
     loopedSlides: 2,  
@@ -213,15 +214,24 @@ const closeVPopup = id => {
   $(`#${id}`).hide()
 }
 
-$(document).on('click', '.section__04 .accordion__item', function(){
-  const $id = $(this).attr('id')
-  const actionable = $(`.${$id}`).attr('class').split(' ').includes('active')
+const goToTop = () => {
+  $('.header.mo').removeClass('on')
+  $('html, body').stop().animate({
+    scrollTop: 0
+  })
+}
 
-  if(actionable){
-    $(this).removeClass('active')
-    $(`.${$id}`).removeClass('active')
-  } else {
-    $(this).addClass('active')
-    $(`.${$id}`).addClass('active')
-  }
+const openAccordion = id => {
+  $(`.${id}`).addClass('active')
+  $('html, body').css('overflow', 'hidden')
+}
+
+const closeAccordion = id => {
+  $(`.${id}`).removeClass('active')
+  $('html, body').css('overflow', 'auto')
+}
+
+$(document).on('click', '.section__05 .section__header span', function(){
+  const $id = $(this).attr('id').split('header')[1]
+  swiper4.slideTo($id)
 })

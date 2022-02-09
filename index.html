@@ -26,7 +26,7 @@
   <body>
     <section class="header pc">
       <div class="common__container">
-        <a href="/"><img class="header__logo" src="resource/img/logo.png" alt="logo"></a>
+        <a onclick="goToTop();"><img class="header__logo" src="resource/img/logo.png" alt="logo"></a>
         <div class="header__menu">
           <a class="header__menu--click" id="section__01">IMAGINA</a>
           <a class="header__menu--click" id="section__09pc">BENEFIT</a>
@@ -45,7 +45,7 @@
     </section>
     <section class="header mo">
       <div class="common__container">
-        <a href="/"><img class="header__logo" src="resource/img/logo.png" alt="logo"></a>
+        <a onclick="goToTop();"><img class="header__logo" src="resource/img/logo.png" alt="logo"></a>
         <div class="header__menu">
           <p class="red__button header__menu--click" id="section__06">DEMO REQUEST</p>
           <div class="lang__menu">
@@ -101,8 +101,6 @@
         <p class="title">The IMAGINA video processor was made for your daily diagnostic and therapeutic needs.</p>
         <p class="content">The platform is completed by three new endsocopes – one video gastroscope and two video colonoscopes.</p>
         <div class="box">
-          <p>Improved <br>diagnostic outcome</p>
-          <img src="resource/img/imagina02.png" alt="#">
         </div>
       </div>
     </section>
@@ -191,7 +189,7 @@
               <div class="slide__left">
                 <p class="slide__title">Touch Screen control</p>
                 <p class="slide__content">We need just one and two finger swipe control for setting adjustment or zoom. Make your own display, you can use Widget function to customize the menu. Thumbnail view allows you to see the diagnosis at once. You can see the captured image and movie on the front panel and monitor at the sametime.</p>
-                <video src="resource/video/IMAGINA-processor.mp4" controls></video>
+                <img src="resource/img/video.gif" alt="#" class="gif">
               </div>
               <div class="slide__center">
                 <img src="resource/img/img45.png" alt="#">
@@ -288,7 +286,7 @@
               <div class="slide__left">
                 <p class="slide__title">Touch Screen control</p>
                 <p class="slide__content">We need just one and two finger swipe control for setting adjustment or zoom. Make your own display, you can use Widget function to customize the menu. Thumbnail view allows you to see the diagnosis at once. You can see the captured image and movie on the front panel and monitor at the sametime.</p>
-                <video src="resource/video/IMAGINA-processor.mp4" controls></video>
+                <img src="resource/img/video.gif" alt="#" class="gif">
               </div>
             </div>
           </div>
@@ -466,7 +464,7 @@
     <section class="section__04" data-aos="fade-up" data-aos-duration="400">
       <div class="video__popup" id="vPopup01">
         <div class="bg" onclick="closeVPopup('vPopup01')"></div>
-        <video src="resource/video/IMAGINA-processor.mp4" controls></video>
+        <video src="resource/video/popup1.mp4" controls></video>
       </div>
       <div class="video__popup" id="vPopup02">
         <div class="bg" onclick="closeVPopup('vPopup02')"></div>
@@ -531,27 +529,25 @@
             </div>
             <div class="swiper-slide">
               <div class="slide__updown">
-                <div class="updown__container">
+                <div class="updown__container video__container">
                   <div class="updown__left">
                     <p class="slide__title mb12">Image 1</p>
-                    <a class="slide__redbutton" onclick="openVPopup('vPopup01')">Video clip available</a>
+                    <img src="resource/img/img69.png" alt="#">
                     <p class="slide__content">Mucosal breaks with exudates are extending to the proximal part of esophagus more than 5mm long and continuous between the tops of mucosal folds, but which involves less than 75% of the circumference. The esophagogastric junction also shows moderate hiatal hernia.</p>
                   </div>
                   <div class="updown__right">
-                    <img src="resource/img/img69.png" alt="#">
-                  </div>
-                </div>
-                <div class="updown__container">
-                  <div class="updown__left">
-                    <p class="slide__title mb12">Image 2 & 3</p>
-                    <p class="slide__content">Mucosal breaks with exudates are extending to the proximal part of esophagus more than 5mm long and continuous between the tops of mucosal folds, but which involves less than 75% of the circumference.</p>
-                  </div>
-                  <div class="updown__right">
-                    <img src="resource/img/img70.png" alt="#">
-                    <img src="resource/img/img71.png" alt="#">
+                    <video src="resource/video/popup1.mp4" controls></video>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="swiper-slide">
+              <p class="slide__title mb12">Image 2 & 3</p>
+              <div class="image__box">
+                <img src="resource/img/img70.png" alt="#">
+                <img src="resource/img/img71.png" alt="#">
+              </div>
+              <p class="slide__content">Mucosal breaks with exudates are extending to the proximal part of esophagus more than 5mm long and continuous between the tops of mucosal folds, but which involves less than 75% of the circumference.</p>
             </div>
           </div>
           <i class="swiper-prev swiper-button-prev-sectionTab01"><</i>
@@ -652,10 +648,9 @@
             </div>
             <div class="swiper-slide">
               <div class="slide__updown">
-                <div class="updown__container">
+                <div class="updown__container video__container">
                   <div class="updown__left">
                     <p class="slide__title mb12">Image 3</p>
-                    <a class="slide__redbutton" onclick="openVPopup('vPopup02')">Video clip available</a>
                     <p class="slide__content">
                       Initially you can see the thickened folds and narrowed interval between folds.<br>
                       The antrum does not seem to be involved by the diffuse type malignancy.<br>
@@ -663,6 +658,9 @@
                       In the retroflection view, the whole area of the fundus and the cardia was involved.<br>
                       There was no ulcer or erosion.
                     </p>
+                  </div>
+                  <div class="updown__right">
+                    <video src="resource/video/popup2.mp4" controls></video>
                   </div>
                 </div>
               </div>
@@ -735,21 +733,23 @@
             </div>
             <div class="swiper-slide">
               <div class="slide__updown">
-                <div class="updown__container">
+                <div class="updown__container video__container">
                   <div class="updown__left">
                     <p class="slide__title mb12">Image 1, 2 & 3</p>
-                    <a class="slide__redbutton" onclick="openVPopup('vPopup03')">Video clip available</a>
                     <p class="slide__content">
                       The i-scan SE shows sessile polyp with whitish surface mimicking sessile serrated polyp.<br>
                       However, the vascular and surface pattern was regular without white spots on i-scan TE image.<br>
                       So, I can expect the pathology as a lowgrade dysplasia based on JNET classification.
                     </p>
+                    <div class="updown__image">
+                      <img src="resource/img/img62.png" alt="#">
+                      <img src="resource/img/img63.png" alt="#">
+                      <img src="resource/img/img64.png" alt="#">
+                    </div>
                   </div>
-                </div>
-                <div class="updown__image">
-                  <img src="resource/img/img62.png" alt="#">
-                  <img src="resource/img/img63.png" alt="#">
-                  <img src="resource/img/img64.png" alt="#">
+                  <div class="updown__right">
+                    <video src="resource/video/popup3.mp4" controls></video>
+                  </div>
                 </div>
               </div>
             </div>
@@ -760,8 +760,9 @@
         </div>
       </div>
       <div class="section__04__mo">
-        <p class="accordion__item" id="sectionAccordion01">Reflux Esophagitis LA C<i></i></p>
+        <p class="accordion__item" id="sectionAccordion01" onclick="openAccordion('sectionAccordion01');">Reflux Esophagitis LA C<i></i></p>
         <div class="accordion__container sectionAccordion01">
+          <div class="bg" onclick="closeAccordion('sectionAccordion01');"></div>
           <div class="swiper-wrapper">
             <div class="swiper-slide slide__profile">
               <div class="profile__left">
@@ -810,7 +811,7 @@
                   <div class="updown__container">
                     <div class="updown__left">
                       <p class="slide__title mb12">Image 1</p>
-                      <a class="slide__redbutton" onclick="openVPopup('vPopup01')">Video clip available</a>
+                      <video src="resource/video/popup1.mp4" controls></video>
                       <p class="slide__content">Mucosal breaks with exudates are extending to the proximal part of esophagus more than 5mm long and continuous between the tops of mucosal folds, but which involves less than 75% of the circumference. The esophagogastric junction also shows moderate hiatal hernia.</p>
                     </div>
                     <div class="updown__right">
@@ -832,8 +833,9 @@
             </div>
           </div>
         </div>
-        <p class="accordion__item" id="sectionAccordion02">Advanced Gastric Cancer,<br>Borrmann Type IV<i></i></p>
+        <p class="accordion__item" id="sectionAccordion02" onclick="openAccordion('sectionAccordion02');">Advanced Gastric Cancer,<br>Borrmann Type IV<i></i></p>
         <div class="accordion__container sectionAccordion02">
+          <div class="bg" onclick="closeAccordion('sectionAccordion02');"></div>
           <div class="swiper-wrapper">
             <div class="swiper-slide slide__profile">
               <div class="profile__left">
@@ -919,7 +921,7 @@
                   <div class="updown__container">
                     <div class="updown__left">
                       <p class="slide__title mb12">Image 3</p>
-                      <a class="slide__redbutton" onclick="openVPopup('vPopup02')">Video clip available</a>
+                      <video src="resource/video/popup2.mp4" controls></video>
                       <p class="slide__content">
                         Initially you can see the thickened folds and narrowed interval between folds.<br>
                         The antrum does not seem to be involved by the diffuse type malignancy.<br>
@@ -934,8 +936,9 @@
             </div>
           </div>
         </div>
-        <p class="accordion__item" id="sectionAccordion03">Endoscopic Differentiation<br>of Colon Polyps<i></i></p>
+        <p class="accordion__item" id="sectionAccordion03" onclick="openAccordion('sectionAccordion03');">Endoscopic Differentiation<br>of Colon Polyps<i></i></p>
         <div class="accordion__container sectionAccordion03">
+          <div class="bg" onclick="closeAccordion('sectionAccordion03');"></div>
           <div class="swiper-wrapper">
             <div class="swiper-slide slide__profile">
               <div class="profile__left">
@@ -992,7 +995,7 @@
                   <div class="updown__container">
                     <div class="updown__left">
                       <p class="slide__title mb12">Image 1</p>
-                      <a class="slide__redbutton" onclick="openVPopup('vPopup03')">Video clip available</a>
+                      <video src="resource/video/popup3.mp4" controls></video>
                       <p class="slide__content">Mucosal breaks with exudates are extending to the proximal part of esophagus more than 5mm long and continuous between the tops of mucosal folds, but which involves less than 75% of the circumference. The esophagogastric junction also shows moderate hiatal hernia.</p>
                     </div>
                     <div class="updown__right">
