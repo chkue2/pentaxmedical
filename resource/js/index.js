@@ -235,3 +235,9 @@ $(document).on('click', '.section__05 .section__header span', function(){
   const $id = $(this).attr('id').split('header')[1]
   swiper4.slideTo($id)
 })
+
+$(document).on('click', '.side__arrow i', function(){
+  const $id = $(this).attr('class')
+  if($id === 'arrow__left') swiper5.slideNext()
+  else swiper5.slidePrev()
+})
