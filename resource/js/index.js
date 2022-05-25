@@ -41,7 +41,7 @@ $(document).ready(function(){
       clickable: true,
     }
   });
-  const swiper3 = new Swiper('.section__04 .swiper__container.sectionTab01', {
+  const swiper3 = new Swiper('.section__044 .swiper__container.sectionTab01', {
     centeredSlides: true,
     slidesPerView: 'auto',
     loop: true,
@@ -57,7 +57,7 @@ $(document).ready(function(){
       prevEl: '.swiper-button-prev-sectionTab01',
     }
   });
-  const swiper3_1 = new Swiper('.section__04 .swiper__container.sectionTab02', {
+  const swiper3_1 = new Swiper('.section__044 .swiper__container.sectionTab02', {
     centeredSlides: true,
     slidesPerView: 'auto',
     loop: true,
@@ -73,7 +73,7 @@ $(document).ready(function(){
       prevEl: '.swiper-button-prev-sectionTab02',
     }
   });
-  const swiper3_2 = new Swiper('.section__04 .swiper__container.sectionTab03', {
+  const swiper3_2 = new Swiper('.section__044 .swiper__container.sectionTab03', {
     centeredSlides: true,
     slidesPerView: 'auto',
     loop: true,
@@ -197,9 +197,9 @@ $(document).on('click', '#headerMenu', function(){
   
 })
 
-$(document).on('click', '.section__04 .section__tab .tab__item', function(){
-  const $target = $('.section__04 .section__tab .tab__item')
-  const $target2 = $('.section__04 .swiper__container')
+$(document).on('click', '.section__044 .section__tab .tab__item', function(){
+  const $target = $('.section__044 .section__tab .tab__item')
+  const $target2 = $('.section__044 .swiper__container')
   const $id = $(this).attr('id')
   $target.removeClass('active')
   $(this).addClass('active')
@@ -241,3 +241,40 @@ $(document).on('click', '.side__arrow i', function(){
   if($id === 'arrow__left') swiper5.slideNext()
   else swiper5.slidePrev()
 })
+
+const sendEmail = () => {
+  const name = $('input[name=name]').val()
+  const phone = $('input[name=phone]').val()
+  const email = $('input[name=email]').val()
+  const company = $('input[name=company]').val()
+  const title = $('input[name=title]').val()
+
+  if(
+    name.replace(/ /gi, '') === ''
+    || phone.replace(/ /gi, '') === ''
+    || email.replace(/ /gi, '') === ''
+    || company.replace(/ /gi, '') === ''
+    || title.replace(/ /gi, '') === ''
+  ) {
+    openVPopup('failedPopup')
+    return false
+  } else {
+    emailjs.send("gyu_s_mail","template_g79cs3j",{
+      name: name,
+      company: company,
+      phone: phone,
+      email: email,
+      title: title,
+    }).then(() => {
+      openVPopup('submitPopup')
+
+    $('input[name=name]').val('')
+    $('input[name=phone]').val('')
+    $('input[name=email]').val('')
+    $('input[name=company]').val('')
+    $('input[name=title]').val('')
+    }, (error) => {
+      alert(error)
+    })
+  }
+}

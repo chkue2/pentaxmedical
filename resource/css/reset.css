@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @font-face{
   font-family: 'SimSun-ExtB';
-  src: url(../font/simsunb.ttf) format('truetype');
+  src: url(../img/resource/font/simsunb.ttf) format('truetype');
   font-weight: normal;
 }
 /* YUI 3.5.0 reset.css (http://developer.yahoo.com/yui/3/cssreset/) - https://cssdeck.com/blog/ */
